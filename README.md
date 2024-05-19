@@ -81,15 +81,13 @@ then search in the output that the tool provides:
 
 ![Tool output](Images/img3.png)
 
-the output is extensive, and you can see that the token `Authorization` is also exposed here, which is really dangerous!
+the output is extensive, but you can see that the token `Authorization` is exposed here, which is really dangerous!
 
 below you can see the message and some metadata. Even if you protect all disk storage on your device. The memory still contains a lot of sensitive data.
 
 ![Sensitive data in memory](Images/img4.png)
 
 There's no need to dump the entire memory. Just examining one page, 4KB of memory, one memory block, can reveal this data.
-
-And that is an example of how this might be used.
 
 ### #2 Detecting debuggers (Library)
 If you've put in a lot of effort to create a program, you certainly wouldn't want it to be run in an environment where debuggers could be used to crack it. A very common method to prevent this is to search for processes by process name or window name. However, crackers can easily bypass this by changing the window or process names.
@@ -196,7 +194,7 @@ char* PMFindMatchBlock(pm_t* pm);
 ### Details docs:
 Process Memory Pattern Scanner (PMPS)🔎
 
-PMPS uses the Windows API function `VirtualQueryEx` to fetch the memory blocks of a specific process. It searches within the process's virtual memory space, which starts at a base address of 0 and extends to the end of the virtual memory. This means that it does not search within the physical memory directly. The search iterate in pages `4KB` at a time.This page size was chosen because it provides optimal alignment for memory, and in my tests, I did not encounter any issues with data cut.
+PMPS uses the Windows API function `VirtualQueryEx` to fetch the memory blocks of a specific process. It searches within the process's virtual memory space, which starts at a base address of 0 and extends to the end of the virtual memory. This means that it does not search within the physical memory directly. The search iterate in pages `4KB` at a time. This page size was chosen because it provides optimal alignment for memory, and in my tests, I did not encounter any issues with data cut.
 \
 Look at this illustration of what I mean:
 \
@@ -338,7 +336,8 @@ int main() {
 
 
 ```
-The library does not allocate and free memory for each search. Instead, there is a fixed heap-allocated size (Page Size 4KB) for both `pm->stringBuffer` and `pm->memDumpBuffer` for better performance. This means that at every search, these buffers are cleared and new data is written to them. If you need to use the data elsewhere, you should allocate space for it yourself.\
+The library does not allocate and free memory for each search. Instead, there is a fixed heap-allocated size (Page Size 4KB) for both `pm->stringBuffer` and `pm->memDumpBuffer` for better performance. This means that at every search, these buffers are cleared and new data is written to them. If you need to use the data elsewhere, you should allocate space for it yourself.
+\
 
 After all that you have to cleanup the Process Matcher.
 
@@ -416,12 +415,10 @@ They use `MiniDumpWriteDump` to dump the entire memory to a file on disk and the
 
 Additionally, I've seen this feature used in the program [Process Hacker](https://processhacker.sourceforge.io/), which also helped inspire and motivate me to develop this library.
 
+---
 
 Special mentions to some colleagues that I've got Inspired from:
 
----
-
-Special mentions to some colleagues that I've got Inspired from them:
 
 \
 Instagram: [@vpw3](https://www.instagram.com/vpw3)
