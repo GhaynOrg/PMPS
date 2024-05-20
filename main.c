@@ -104,7 +104,5 @@ int main(int argc, char* argv[]) {
     //Clean up before you leave
     CleanupProcessMatcher(pm);
 
-    return 0;
-
 	return 0;
 }
