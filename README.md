@@ -45,7 +45,7 @@ Table Of Content
 To utilize the memory searching approach in this project, you will be provided with two resources:
 <br/>
 - Library: You can import these files into your C/C++ project to build applications and programs that leverage the memory searching approach.
-> Import <a src="/pmps.h">pmps.h</a>, <a src="/re.h">re.h</a> <a src="/pmps.c">pmps.c</a> and <a src="/re.c">re.c</a> in your project then include pmps.h and read the docs to find what you need to use.
+> Import [pmps.h](/pmps.h), [re.h](/re.h) [pmps.c](/pmps.c) and [re.c](/re.c) in your project then include pmps.h and read the docs to find what you need to use.
 
 > 🟡 I will port it to vcpkg later, after ensuring it is stable and has standard features.
 
@@ -375,7 +375,7 @@ Some TODOs:
 
 ## Dependency
 
-The project depend on the library [@kokke/tiny-regex-c](https://github.com/kokke/tiny-regex-c) for parsing regex. Thanks to [@kokke](https://github.com/kokke/) for creating this wonderful library. Please note that the project uses a specific version of their code to avoid mismatches when they update their library. Import the files [re.c](#) and [re.h](#) from our repository.
+The project depend on the library [@kokke/tiny-regex-c](https://github.com/kokke/tiny-regex-c) for parsing regex. Thanks to [@kokke](https://github.com/kokke/) for creating this wonderful library. Please note that the project uses a specific version of their code to avoid mismatches when they update their library. Import the files [re.c](/re.c) and [re.h](/re.h) from our repository.
 
 ## Author
 This project was created by @justalghamdi under [Ghayn organization](https://github.com/ghaynorg).
