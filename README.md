@@ -45,7 +45,7 @@ Table Of Content
 To utilize the memory searching approach in this project, you will be provided with two resources:
 <br/>
 - Library: You can import these files into your C/C++ project to build applications and programs that leverage the memory searching approach.
-> Import [pmps.h](/pmps.h), [re.h](/re.h) [pmps.c](/pmps.c) and [re.c](/re.c)F in your project then include pmps.h and read the docs to find what you need to use.
+> Import [pmps.h](/pmps.h), [re.h](/re.h) [pmps.c](/pmps.c) and [re.c](/re.c) in your project then include pmps.h and read the docs to find what you need to use.
 
 > 🟡 I will port it to vcpkg later, after ensuring it is stable and has standard features.
 
