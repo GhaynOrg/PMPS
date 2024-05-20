@@ -26,9 +26,9 @@
 * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
 * OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef __PMPS__
-#define __PMPS__
-#undef UNICODE 
+#ifndef __PMPS_H__
+#define __PMPS_H__
+
 #include <Windows.h>
 #include <tlhelp32.h>
 #include "re.h"

@@ -1,7 +1,9 @@
+// Define and undefine macros in the source file to avoid affecting users of the library.
 #define _CRT_SECURE_NO_WARNINGS
-#include <string.h>
+#undef UNICODE 
 
 #include "pmps.h"
+
 
 static DWORD find_pid_by_process_name(char* pn) {
     HANDLE hProcessSnap;
